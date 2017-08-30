@@ -73,7 +73,7 @@ $(document).ready(function () {
         // Hide Timer
         $("#timer").hide();
         // Testing holder for answer page
-        setTimeout(newQuestionPage, 5000); //FIXFIXFIX//FIXFIXFIX//FIXFIXFIX//FIXFIXFIX//FIXFIXFIX
+        setTimeout(newQuestionPage, 30000); //FIXFIXFIX//FIXFIXFIX//FIXFIXFIX//FIXFIXFIX//FIXFIXFIX
     })
 
     //      C O R R E C T   A N S W E R   P A G E S     //
@@ -181,7 +181,7 @@ $(document).ready(function () {
 
     //      T I M E R      //
 
-    var time = 5; //FIX FIX FIX FIX////FIX FIX FIX FIX////FIX FIX FIX FIX//
+    var time = 30; //FIX FIX FIX FIX////FIX FIX FIX FIX////FIX FIX FIX FIX//
 
     function startTimer() {
         intervalId = setInterval(decrement, 1000);
@@ -199,17 +199,17 @@ $(document).ready(function () {
             // Resets Timer
             resetTimer();
             // Goes to next answer:
-            nextAnswer();
+            nextAnswer();   
             // Hide Timer
             $("#timer").hide();
             // Testing holder for answer page
-            setTimeout(newQuestionPage, 5000); //FIXFIXFIX//FIXFIXFIX//FIXFIXFIX//FIXFIXFIX//FIXFIXFIX
+            setTimeout(newQuestionPage, 30000); //FIXFIXFIX//FIXFIXFIX//FIXFIXFIX//FIXFIXFIX//FIXFIXFIX
         }
     }
 
     function resetTimer() {
         clearInterval(intervalId);
-        time = 5; //FIX FIX FIX FIX////FIX FIX FIX FIX////FIX FIX FIX FIX//
+        time = 30; //FIX FIX FIX FIX////FIX FIX FIX FIX////FIX FIX FIX FIX//
         $('#timer').html(time);
     }
 
