@@ -69,11 +69,11 @@ $('.enter').on('click', function(){
 // Resets Timer
     resetTimer();
 // Goes to next answer:
-    nextQuestion();      //    Go to next answer, then to next question, time, etc.
-// Starts Timer
-    startTimer();
-// If last question:
-    tallyPage();
+    nextAnswer();   
+// Hide Timer
+    $("#timer").hide();
+// Testing holder for answer page
+    setTimeout(newQuestionPage, 2000);
 })
 
 //      C O R R E C T   A N S W E R   P A G E S     //
@@ -94,10 +94,15 @@ $('.enter').on('click', function(){
 
 
 
+function newQuestionPage(){
+    nextQuestion(); 
+// Start & Show Timer
+    startTimer();
+    $("#timer").show();
+// If last question:
+    tallyPage();
 
-
-
-
+}
 
 
 
@@ -129,6 +134,7 @@ $('.restart').on('click', function(){
     incorrect = 0;
     unanswered = 0;
     currentQuestion = 0;
+    currentAnswer = 0;
     $('#tally-page').hide();
     $('#welcome-page').fadeIn();    
     console.log('correct:', correct);
@@ -163,19 +169,19 @@ function timeUp () {
     console.log('unanswered:', unanswered);
 }
 
-function nextQuestion () {
-    $($question.get(currentQuestion)).fadeOut();
-    currentQuestion = currentQuestion + 1;
-    if (currentQuestion == totalQuestions) {
-        console.log('Done with Quiz');
-    } else {
-        $($question.get(currentQuestion)).fadeIn();        
-    }
-}
+// function nextQuestion () {
+//     $($question.get(currentQuestion)).fadeOut();
+//     currentQuestion = currentQuestion + 1;
+//     if (currentQuestion == totalQuestions) {
+//         console.log('Done with Quiz');
+//     } else {
+//         $($question.get(currentQuestion)).fadeIn();        
+//     }
+// }
 
 function nextQuestion () {
-    $($question.get(currentQuestion)).fadeOut();
-    currentQuestion = currentQuestion + 1;
+    $($answer.get(currentAnswer)).fadeOut();
+    currentAnswer = currentAnswer + 1;
     if (currentQuestion == totalQuestions) {
         console.log('Done with Quiz');
     } else {
@@ -184,8 +190,15 @@ function nextQuestion () {
 }
 
 function nextAnswer () {
-    $($answer.get(currentAnswer)).fadeIn();
+    $($question.get(currentQuestion)).fadeOut();
+    currentQuestion = currentQuestion + 1;
+    if (currentQuestion == totalQuestions) {
+            console.log('Done with Quiz');
+    } else {
+        $($answer.get(currentAnswer)).fadeIn();
+    }
 }
+
 
 function tallyPage() {
     if (currentQuestion == totalQuestions) {   //&& something else after last gif
