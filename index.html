@@ -5,10 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Display None html</title>
-
+    <title>National Parks Trivia</title>
+    <!-- jQuery & jQuery UI -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <!-- Javascript -->
+    <script src="assets/javascript/app.js"></script>
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
         crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body>
@@ -18,107 +26,482 @@
             <h1>American National Parks Trivia</h1>
         </div>
         <div class="row">
-            <h1></h1>
+            <p>Welcome to American National Parks Trivia! Ready to test you knowledge on our National Parks?</p>
+            <p>There will be 10 questions, each with a 30 second timer. Even if you don't get thr right answers, you'll still
+                learn plenty of interesting facts about National Parks in the U.S.</p>
+            <p>Good Luck!</p>
+        </div>
+        <div class="row">
+            <button id="start-button" type="button" class="btn btn-secondary">START</button>
         </div>
     </div>
 
     <!-- Q1  PAGE -->
-    <div class="container" id="q1-page">
+    <div class="timer">
+        <div id="timer"></div>
+    </div>
+    <div class="container question" id="q1-page">
         <div class="row">
         </div>
         <div class="row">
+            <div class="btn-group radio" data-toggle="buttons">
+                <div class="form-check">
+                    <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="radio" value="0">
+                    This is not it
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="radio" value="1">
+                    CORRECT
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="radio" value="0">
+                    This is not it
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="radio" value="0">
+                    This is not it
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <button type="button" class="btn btn-secondary enter">Enter</button>
         </div>
     </div>
 
+    <!-- Q1 ANSWER -->
+    <div class="container answer">
+        <h1>Answer 1</h1>
+    </div>
 
     <!-- Q2  PAGE -->
-    <div class="container" id="q2-page">
+    <div class="container question" id="q2-page">
         <div class="row">
+            <p> Question Two</p>
+        </div>
+        <div class="row radio">
+
+            <div class="form-check">
+                <label class="form-check-label">
+                <input class="form-check-input" type="radio" name="radio" value="0">
+                This is not it
+            </label>
+            </div>
+
+            <div class="form-check">
+                <label class="form-check-label">
+                <input class="form-check-input" type="radio" name="radio" value="1">
+                CORRECT
+            </label>
+            </div>
+
+            <div class="form-check">
+                <label class="form-check-label">
+                <input class="form-check-input" type="radio" name="radio" value="0">
+                This is not it
+            </label>
+            </div>
+
+            <div class="form-check">
+                <label class="form-check-label">
+                <input class="form-check-input" type="radio" name="radio" value="0">
+                This is not it
+            </label>
+            </div>
         </div>
         <div class="row">
+            <button type="button" class="btn btn-secondary enter">Enter</button>
         </div>
     </div>
-
-
+    <!-- Q2 ANSWER -->
+    <div class="container answer">
+        <h1>Answer 2</h1>
+    </div>
     <!-- Q3  PAGE -->
-    <div class="container" id="q3-page">
+    <div class="container question" id="q3-page">
         <div class="row">
+            <p> Question Three</p>
+        </div>
+        <div class="row radio">
+
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="radio" value="0">
+                    This is not it
+                </label>
+            </div>
+
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="radio" value="1">
+                    CORRECT
+                </label>
+            </div>
+
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="radio" value="0">
+                    This is not it
+                </label>
+            </div>
+
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="radio" value="0">
+                    This is not it
+                </label>
+            </div>
         </div>
         <div class="row">
+            <button type="button" class="btn btn-secondary enter">Enter</button>
         </div>
     </div>
-
-
+    <!-- Q3 ANSWER -->
+    <div class="container answer">
+        <h1>Answer 3</h1>
+    </div>
     <!-- Q4  PAGE -->
-    <div class="container" id="q4-page">
+    <div class="container question" id="q4-page">
         <div class="row">
+            <p>Question Four</p>
+        </div>
+        <div class="row radio">
+
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="radio" value="0">
+                    This is not it
+                </label>
+            </div>
+
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="radio" value="1">
+                    CORRECT
+                </label>
+            </div>
+
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="radio" value="0">
+                    This is not it
+                </label>
+            </div>
+
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="radio" value="0">
+                    This is not it
+                </label>
+            </div>
         </div>
         <div class="row">
+            <button type="button" class="btn btn-secondary enter">Enter</button>
         </div>
     </div>
-
-
+    <!-- Q4 ANSWER -->
+    <div class="container answer">
+        <h1>Answer 4</h1>
+    </div>
     <!-- Q5  PAGE -->
-    <div class="container" id="q5-page">
+    <div class="container question" id="q5-page">
         <div class="row">
+            <p> Question Five</p>
+        </div>
+        <div class="row radio">
+
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="radio" value="0">
+                    This is not it
+                </label>
+            </div>
+
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="radio" value="1">
+                    CORRECT
+                </label>
+            </div>
+
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="radio" value="0">
+                    This is not it
+                </label>
+            </div>
+
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="radio" value="0">
+                    This is not it
+                </label>
+            </div>
         </div>
         <div class="row">
+            <button type="button" class="btn btn-secondary enter">Enter</button>
         </div>
     </div>
-
-
+    <!-- Q5 ANSWER -->
+    <div class="container answer">
+        <h1>Answer 5</h1>
+    </div>
     <!-- Q6  PAGE -->
-    <div class="container" id="q6-page">
-        <div class="row">
+    <div class="container question" id="q6-page">
+        <div class="row radio">
+            <p>Question Six</p>
         </div>
         <div class="row">
+
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="radio" value="0">
+                    This is not it
+                </label>
+            </div>
+
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="radio" value="1">
+                    CORRECT
+                </label>
+            </div>
+
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="radio" value="0">
+                    This is not it
+                </label>
+            </div>
+
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="radio" value="0">
+                    This is not it
+                </label>
+            </div>
+        </div>
+        <div class="row">
+            <button type="button" class="btn btn-secondary enter">Enter</button>
         </div>
     </div>
-
-
+    <!-- Q6 ANSWER -->
+    <div class="container answer">
+        <h1>Answer 6</h1>
+    </div>
     <!-- Q7  PAGE -->
-    <div class="container" id="q7-page">
+    <div class="container question" id="q7-page">
         <div class="row">
+            <p>Question Seven</p>
+        </div>
+        <div class="row radio">
+
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="radio" value="0">
+                    This is not it
+                </label>
+            </div>
+
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="radio" value="1">
+                    CORRECT
+                </label>
+            </div>
+
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="radio" value="0">
+                    This is not it
+                </label>
+            </div>
+
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="radio" value="0">
+                    This is not it
+                </label>
+            </div>
         </div>
         <div class="row">
+            <button type="button" class="btn btn-secondary enter">Enter</button>
         </div>
     </div>
-
-
+    <!-- Q7 ANSWER -->
+    <div class="container answer">
+        <h1>Answer 7</h1>
+    </div>
     <!-- Q8  PAGE -->
-    <div class="container" id="q8-page">
+    <div class="container question" id="q8-page">
         <div class="row">
+            <p>Question Eight</p>
+        </div>
+        <div class="row radio">
+
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="radio" value="0">
+                    This is not it
+                </label>
+            </div>
+
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="radio" value="1">
+                    CORRECT
+                </label>
+            </div>
+
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="radio" value="0">
+                    This is not it
+                </label>
+            </div>
+
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="radio" value="0">
+                    This is not it
+                </label>
+            </div>
         </div>
         <div class="row">
+            <button type="button" class="btn btn-secondary enter">Enter</button>
         </div>
     </div>
-
-
+    <!-- Q8 ANSWER -->
+    <div class="container answer">
+        <h1>Answer 8</h1>
+    </div>
     <!-- Q9  PAGE -->
-    <div class="container" id="q9-page">
+    <div class="container question" id="q9-page">
         <div class="row">
+            <p>Question Nine</p>
+        </div>
+        <div class="row radio">
+
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="radio" value="0">
+                    This is not it
+                </label>
+            </div>
+
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="radio" value="1">
+                    CORRECT
+                </label>
+            </div>
+
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="radio" value="0">
+                    This is not it
+                </label>
+            </div>
+
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="radio" value="0">
+                    This is not it
+                </label>
+            </div>
         </div>
         <div class="row">
+            <button type="button" class="btn btn-secondary enter">Enter</button>
         </div>
     </div>
-
-
+    <!-- Q9 ANSWER -->
+    <div class="container answer">
+        <h1>Answer 9</h1>
+    </div>
     <!-- Q10  PAGE -->
-    <div class="container" id="q10-page">
+    <div class="container question" id="q10-page">
         <div class="row">
+            <p>Question Ten</p>
+        </div>
+        <div class="row radio">
+
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="radio" value="0">
+                    This is not it
+                </label>
+            </div>
+
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="radio" value="1">
+                    CORRECT
+                </label>
+            </div>
+
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="radio" value="0">
+                    This is not it
+                </label>
+            </div>
+
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="radio" value="0">
+                    This is not it
+                </label>
+            </div>
         </div>
         <div class="row">
+            <button type="button" class="btn btn-secondary enter">Enter</button>
         </div>
     </div>
-
-    
+    <!-- Q10 ANSWER -->
+    <div class="container answer">
+        <h1>Answer 10</h1>
+    </div>
     <!-- TALLY  PAGE -->
-    <div class="container" id="tally-page">
+    <div class="container page" id="tally-page">
         <div class="row">
+            <p>Tally Page</p>
         </div>
         <div class="row">
+            <div class="col">
+                Correct
+            </div>
+            <div class="col" id="correct"></div>
         </div>
-    </div>    
+
+        <div class="row">
+            <div class="col">
+                Incorrect
+            </div>
+            <div class="col" id="incorrect"></div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                Unanswered
+            </div>
+            <div class="col" id="unanswered"></div>
+        </div>
+
+        <div class="row">
+            <button type="button" class="btn btn-secondary restart">Restart</button>
+        </div>
+    </div>
 
 </body>
 
