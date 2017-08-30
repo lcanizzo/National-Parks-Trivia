@@ -23,11 +23,11 @@ $(document).ready(function () {
 
 
     //      W E L C O M E  P A G E       //
-    //     -When they click the start button:  
-    //         -the content will display none (disappear)
-    //         -the first question will appear
-    //         -the options for the first question will appear
-    //         -the first timer will start running
+                                                //     -When they click the start button:  
+                                                //         -the content will display none (disappear)
+                                                //         -the first question will appear
+                                                //         -the options for the first question will appear
+                                                //         -the first timer will start running
 
     $('#start-button').on('click', function () {
         $('#welcome-page').hide();
@@ -38,28 +38,28 @@ $(document).ready(function () {
 
     //      Q U E S T I O N   P A G E S       //
 
-    // The timer will start when the page opens
-    //     -the timer will display on the page as: 10sec left, 9sec left... etc.
-    //     -when the timer reaches 0:
-    //         -the unanswered score will increase by 1
-    //         -the content of the page will disappear
-    //         -the content of the next page will display
+                                                // The timer will start when the page opens
+                                                //     -the timer will display on the page as: 10sec left, 9sec left... etc.
+                                                //     -when the timer reaches 0:
+                                                //         -the unanswered score will increase by 1
+                                                //         -the content of the page will disappear
+                                                //         -the content of the next page will display
 
-    // The question will display
-    //     -options will function as buttons
-    //     -if the correct function is clicked:
-    //         -correct score will increase by 1
-    //     -if any other button is clicked:
-    //         -incorrect score will increase by 1
+                                                // The question will display
+                                                //     -options will function as buttons
+                                                //     -if the correct function is clicked:
+                                                //         -correct score will increase by 1
+                                                //     -if any other button is clicked:
+                                                //         -incorrect score will increase by 1
 
-    // Enter button will:
-    //     -submit answer
-    //     -reset timer
-    //     -transition to next page
+                                                // Enter button will:
+                                                //     -submit answer
+                                                //     -reset timer
+                                                //     -transition to next page
 
-    // the correct answer has a value of 1
-    // incorrect answers have a value of 0?
-    //      pull value???? (no spaces in jQuery selector)
+                                                // the correct answer has a value of 1
+                                                // incorrect answers have a value of 0?
+                                                //      pull value???? (no spaces in jQuery selector)
 
     var chosenAnswer = 0;
 
@@ -72,21 +72,21 @@ $(document).ready(function () {
         nextAnswer();
         // Hide Timer
         $("#timer").hide();
-        // Testing holder for answer page
-        setTimeout(newQuestionPage, 30000); //FIXFIXFIX//FIXFIXFIX//FIXFIXFIX//FIXFIXFIX//FIXFIXFIX
     })
 
     //      C O R R E C T   A N S W E R   P A G E S     //
-    //     -a gif will display
-    // After the gif has finished (set time):
-    //     -the content of the page will disappear
-    //     -the content of the next page will display 
-    // OR (maybe add later) onclick too:
-    //     -the content of the page will disappear
-    //     -the content of the next QUESTION page will display 
-    //     -the next timer will start and update on the screen
+                                                //     -a gif will display
+                                                // After the gif has finished (set time):
+                                                //     -the content of the page will disappear
+                                                //     -the content of the next page will display 
+                                                // OR (maybe add later) onclick too:
+                                                //     -the content of the page will disappear
+                                                //     -the content of the next QUESTION page will display 
+                                                //     -the next timer will start and update on the screen
 
-
+    $('.next').on('click', function() {
+        newQuestionPage();
+    })
 
     function newQuestionPage() {
         nextQuestion();
@@ -99,17 +99,17 @@ $(document).ready(function () {
 
     //      F I N A L   T A L L Y   P A G E      //
 
-    // The tally of correct, unanswered, and incorrect answers will display
-    // Given different score ranges, different html content will display
+                                                // The tally of correct, unanswered, and incorrect answers will display
+                                                // Given different score ranges, different html content will display
 
-    // A reset button will display:
-    //     -if the reset button is clicked:
-    //          -the content of the page will disappear
-    //          -the content of the FIRST QUESTION page will display 
-    //             -(serves the same purpose as the welcome page)
-    //          -correct = 0
-    //          -incorrect = 0
-    //          -unanswered = 0
+                                                // A reset button will display:
+                                                //     -if the reset button is clicked:
+                                                //          -the content of the page will disappear
+                                                //          -the content of the FIRST QUESTION page will display 
+                                                //             -(serves the same purpose as the welcome page)
+                                                //          -correct = 0
+                                                //          -incorrect = 0
+                                                //          -unanswered = 0
 
     $('.restart').on('click', function () {
         correct = 0;
@@ -132,10 +132,8 @@ $(document).ready(function () {
 
         if (chosenAnswer == 1) {
             correct++;
-            //Display "That's Right" text option on next page //
         } else if (chosenAnswer == 0) {
             incorrect++;
-            //Display "Nope" text option on next page //
         }
         if (!$("input[name=radio]:checked").val()) {
             unanswered++;
@@ -169,8 +167,8 @@ $(document).ready(function () {
 
 
     function tallyPage() {
-        if (currentQuestion == totalQuestions) { //&& something else after last gif
-            $('#tally-page').fadeIn(); //remove calls of tallyPage where not needed
+        if (currentQuestion == totalQuestions) { 
+            $('#tally-page').fadeIn(); 
             $("#correct").html(correct);
             $("#incorrect").html(incorrect);
             $("#unanswered").html(unanswered);
@@ -181,7 +179,7 @@ $(document).ready(function () {
 
     //      T I M E R      //
 
-    var time = 30; //FIX FIX FIX FIX////FIX FIX FIX FIX////FIX FIX FIX FIX//
+    var time = 30; 
 
     function startTimer() {
         intervalId = setInterval(decrement, 1000);
@@ -202,14 +200,12 @@ $(document).ready(function () {
             nextAnswer();   
             // Hide Timer
             $("#timer").hide();
-            // Testing holder for answer page
-            setTimeout(newQuestionPage, 30000); //FIXFIXFIX//FIXFIXFIX//FIXFIXFIX//FIXFIXFIX//FIXFIXFIX
         }
     }
 
     function resetTimer() {
         clearInterval(intervalId);
-        time = 30; //FIX FIX FIX FIX////FIX FIX FIX FIX////FIX FIX FIX FIX//
+        time = 30; 
         $('#timer').html(time);
     }
 
