@@ -73,7 +73,7 @@ $(document).ready(function () {
         // Hide Timer
         $("#timer").hide();
         // Testing holder for answer page
-        setTimeout(newQuestionPage, 800); //FIXFIXFIX//FIXFIXFIX//FIXFIXFIX//FIXFIXFIX//FIXFIXFIX
+        setTimeout(newQuestionPage, 5000); //FIXFIXFIX//FIXFIXFIX//FIXFIXFIX//FIXFIXFIX//FIXFIXFIX
     })
 
     //      C O R R E C T   A N S W E R   P A G E S     //
@@ -203,7 +203,7 @@ $(document).ready(function () {
             // Hide Timer
             $("#timer").hide();
             // Testing holder for answer page
-            setTimeout(newQuestionPage, 800); //FIXFIXFIX//FIXFIXFIX//FIXFIXFIX//FIXFIXFIX//FIXFIXFIX
+            setTimeout(newQuestionPage, 5000); //FIXFIXFIX//FIXFIXFIX//FIXFIXFIX//FIXFIXFIX//FIXFIXFIX
         }
     }
 
