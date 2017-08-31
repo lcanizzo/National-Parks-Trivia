@@ -201,9 +201,9 @@ function newBackground () {
     function tallyPage() {
         if (currentQuestion == totalQuestions) { 
             $('#tally-page').fadeIn(); 
-            $("#correct").html(correct);
-            $("#incorrect").html(incorrect);
-            $("#unanswered").html(unanswered);
+            $("#correct").html("Correct: " + correct);
+            $("#incorrect").html("Incorrect: " + incorrect);
+            $("#unanswered").html("Unanswered: " + unanswered);
             resetTimer();
             $("#timer").hide();
         }
@@ -211,7 +211,7 @@ function newBackground () {
 
     //      T I M E R      //
 
-    var time = 3030; 
+    var time = 30; 
 
     function startTimer() {
         intervalId = setInterval(decrement, 1000);
@@ -237,7 +237,7 @@ function newBackground () {
 
     function resetTimer() {
         clearInterval(intervalId);
-        time = 3030; 
+        time = 30; 
         $('#timer').html(time);
     }
 
