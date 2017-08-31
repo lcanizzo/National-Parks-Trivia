@@ -63,7 +63,7 @@ var questions = [{ //Question 1//
         second: "Virgin Islands National Park",
         third: "Everglades National Park",
         fourth: "Biscayne National Park",
-        answer: "second"
+        answer: "fourth"
     }, { //Question 9//
         prompt: "Which National Park is the largest archaeological preserve in the United States?",
         first: "Zion National Park",
