@@ -16,15 +16,21 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
         crossorigin="anonymous">
     <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body>
-    <!-- WELCOME    PAGE -->
+    <!-- NAV BAR -->
+    <div class="nav-box">
+            <nav class="navbar sticky-top navbar-dark bg-dark">
+                <div class="container justify-content-center">
+                    <h1 class="navbar-brand">National Parks Trivia</h1>
+                </div>
+            </nav>
+    </div>
+    <!-- WELCOME PAGE -->
     <div class="container" id="welcome-page">
-        <div class="row">
-            <h1>American National Parks Trivia</h1>
-        </div>
         <div class="row">
             <p>Welcome to American National Parks Trivia! Ready to test you knowledge on our National Parks?</p>
             <p>There will be 10 questions, each with a 30 second timer. Even if you don't get the right answers, you'll still
@@ -40,9 +46,6 @@
     <div class="timer">
         <div id="timer"></div>
     </div>
-
-    <!-- BACKGROUND IMAGE -->
-    <img id="background-image" src="" alt="Park Image">
 
     <!-- Q1  PAGE -->
     <div class="container question" id="q1-page">

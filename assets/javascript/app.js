@@ -71,6 +71,10 @@ $(document).ready(function () {
         nextAnswer();
         // Hide Timer
         $("#timer").hide();
+
+
+        
+        newBackground();
     })
 
     //      C O R R E C T   A N S W E R   P A G E S     //
@@ -113,10 +117,13 @@ var images = [
 ]
 console.log('images:', images[bg]);
 
-function newBackground () {
-    document.body.style.backgroundImage = "url('"+images[bg]+"')";
-}
+// function newBackground () {
+//     document.body.style.backgroundImage = "url('"+images[bg]+"')";
+// }
 
+function newBackground () {
+  $(".answer").css("background-image",  "url('"+images[bg]+"')");  
+}
 
 
 
@@ -140,6 +147,7 @@ function newBackground () {
         unanswered = 0;
         currentQuestion = 0;
         currentAnswer = 0;
+        bg = 0;
         $('#tally-page').hide();
         $('#welcome-page').fadeIn();
         console.log('correct:', correct);
@@ -175,6 +183,7 @@ function newBackground () {
     function nextQuestion() {
         $($answer.get(currentAnswer)).fadeOut();
         currentAnswer = currentAnswer + 1;
+        bg = bg + 1;
         if (currentQuestion == totalQuestions) {
             console.log('Done with Quiz');
         } else {
