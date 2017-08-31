@@ -22,6 +22,28 @@ body {
     text-align: center;
 }
 
+/* F O O T E R  */
+.footer-content {
+    color: #444;
+    font-family:'Open Sans', sans-serif;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+} 
+
+.fixed-footer {
+    position: absolute;
+    width: 100%;
+    max-height: 60px;
+    bottom: 0;
+    left: 0;
+}
+
+.center-footer {
+    margin: 0 auto;
+    width: 50%;
+}
+
 /* W E L C O M E   P A G E  */
 #welcome-page {
     font-size: 26px;
