@@ -1,6 +1,40 @@
 body {
     padding: 0;
 }
+/* N A V B A R  */
+.navbar-brand {
+    text-align: center;
+    padding-left: 70px;
+}
+
+/* T I M E R  */
+.timer {
+    position: fixed;
+    top: 60px;
+    left: 50%;
+    height: 80px;
+    max-width: 100px;
+    padding: 10px;
+    font-size: 26px;
+    color: #5b5b5b;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Q U E S T I O N   P A G E */
+.prompt {
+    width: 100%;
+    font-size: 26px;
+    color: #5b5b5b;
+    margin: 60px auto;
+    text-align: center;
+}
+
+
+
+
+
+/* A N S W E R   P A G E  */
 
 .answer {
     position: fixed;
@@ -10,4 +44,49 @@ body {
     min-width: 100%;
     margin: 0;    
     background-size: 100% 100%;
+}
+
+.fun-fact {
+    position: absolute;
+    top: 90px;
+    right: 100px;
+    font-size: 18px;
+
+    padding: 10px;
+
+    border-radius: .25rem;
+    border: 1px solid transparent;
+    border-color: #868e96;
+
+    color: #5b5b5b;
+    max-width: 20%;
+    background-color: rgba(255, 255, 255, 0.73);    
+}
+
+.right-answer {
+    position: absolute;
+    top: 90px;
+    left: 100px;
+    font-size: 20px;
+
+    padding: 10px;
+    
+    border-radius: .25rem;
+    border: 1px solid transparent;
+    border-color: #868e96;
+
+    color: #5b5b5b;
+    max-width: 45%;
+    background-color: rgba(255, 255, 255, 0.73);     
+}
+
+.next {
+    position: absolute;
+    bottom: 50px;
+    right: 100px;
+    background-color: rgba(255, 255, 255, 0.73);    
+    color: #5b5b5b;
+    width: 100px;
+    height: 60px;
+    font-size: 26px;    
 }

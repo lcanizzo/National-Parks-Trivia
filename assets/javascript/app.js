@@ -211,7 +211,7 @@ function newBackground () {
 
     //      T I M E R      //
 
-    var time = 30; 
+    var time = 3030; 
 
     function startTimer() {
         intervalId = setInterval(decrement, 1000);
@@ -237,7 +237,7 @@ function newBackground () {
 
     function resetTimer() {
         clearInterval(intervalId);
-        time = 30; 
+        time = 3030; 
         $('#timer').html(time);
     }
 
