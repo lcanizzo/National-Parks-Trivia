@@ -4,7 +4,7 @@ var unanswered = 0;
 var currentQuestion = 0;
 var currentImage = 0;
 var chosenAnswer = "none";
-var time = 30;
+var time = 3030;
 // Index of the given background image ((images array))
 var bg = 0;
 
@@ -276,7 +276,7 @@ function decrement() {
 
 function resetTimer() {
     clearInterval(intervalId);
-    time = 30;
+    time = 3030;
     $('#timer').html(time);
 }
 

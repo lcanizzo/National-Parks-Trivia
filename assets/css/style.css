@@ -73,7 +73,7 @@ body {
     text-align: center;
 }
 
-.choices {
+.btn {
     font-size: 28px;
     color: #5b5b5b;
     margin: 20px auto;
@@ -83,8 +83,8 @@ body {
 
 .enter {
     position: absolute;
-    bottom: 200px;
-    right: 46%;
+    bottom: 100px;
+    right: 47%;
     background-color: rgba(228, 228, 228, 0.73);    
     color: #5b5b5b;
     width: 100px;
