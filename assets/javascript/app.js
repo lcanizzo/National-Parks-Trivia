@@ -19,8 +19,7 @@ $(document).ready(function () {
 
     $('#tally-page').hide();
     $('.timer').hide();
-
-
+    $('#background-image').hide();
 
     //      W E L C O M E  P A G E       //
                                                 //     -When they click the start button:  
@@ -96,6 +95,30 @@ $(document).ready(function () {
         // If last question:
         tallyPage();
     }
+
+    //      A N S W E R   P A G E   I M A G E S      //
+var bg = 0;
+    
+var images = [
+    'assets/images/sequoia.jpg',
+    'assets/images/denali-1.jpg',
+    'assets/images/mammoth.jpg',
+    'assets/images/crater.jpg',
+    'assets/images/dunes.jpg',
+    'assets/images/national-parks.jpg',
+    'assets/images/swatter.jpg',
+    'assets/images/biscayne.jpg',
+    'assets/images/mesa.jpg',
+    'assets/images/smoky.jpg',
+]
+console.log('images:', images[bg]);
+
+function newBackground () {
+    document.body.style.backgroundImage = "url('"+images[bg]+"')";
+}
+
+
+
 
     //      F I N A L   T A L L Y   P A G E      //
 
