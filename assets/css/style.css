@@ -1,17 +1,18 @@
 body {
     padding: 0;
 }
+
 /* N A V B A R  */
 .navbar-brand {
     text-align: center;
-    padding-left: 70px;
+    margin-right: 0;
 }
 
 /* T I M E R  */
 .timer {
     position: fixed;
     top: 60px;
-    left: 50%;
+    left: 48%;
     height: 80px;
     max-width: 100px;
     padding: 10px;
@@ -26,11 +27,28 @@ body {
     width: 100%;
     font-size: 26px;
     color: #5b5b5b;
-    margin: 60px auto;
+    margin: 100px auto 50px;
     text-align: center;
 }
 
+.form-check {
+    font-size: 28px;
+    color: #5b5b5b;
+    margin: 20px auto;
+    text-align: center;
+    display: block;
+}
 
+.enter {
+    position: absolute;
+    bottom: 200px;
+    right: 46%;
+    background-color: rgba(228, 228, 228, 0.73);    
+    color: #5b5b5b;
+    width: 100px;
+    height: 60px;
+    font-size: 26px;    
+}
 
 
 
