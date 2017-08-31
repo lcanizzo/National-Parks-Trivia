@@ -270,6 +270,7 @@ function decrement() {
         nextAnswer();
         // Hide Timer
         $("#timer").hide();
+        newBackground();        
     }
 }
 
