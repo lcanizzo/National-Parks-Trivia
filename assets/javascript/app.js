@@ -44,12 +44,12 @@ var questions = [{ //Question 1//
         fourth: "Mesa Verde National Park",
         answer: "second"
     }, { //Question 6//
-        prompt: "How many National Parks does the National Park Service manage?",
-        first: "411",
-        second: "36",
-        third: "59",
-        fourth: "11",
-        answer: "third"
+        prompt: "Which National Park receives the most visitors annually?",
+        first: "Great Smoky Mountains National Park",
+        second: "Yosemite National Park",
+        third: "Big Bend National Park",
+        fourth: "Yellowstone National Park",
+        answer: "first"
     }, { //Question 7//
         prompt: "A Yosemite bear once slapped at so many people, it was nicknamed:",
         first: "Swatter",
@@ -72,12 +72,12 @@ var questions = [{ //Question 1//
         fourth: "Grand Teton National Park",
         answer: "third"
     }, { //Question 10//
-        prompt: "Which National Park receives the most visitors annually?",
-        first: "Great Smoky Mountains National Park",
-        second: "Yosemite National Park",
-        third: "Big Bend National Park",
-        fourth: "Yellowstone National Park",
-        answer: "first"
+        prompt: "How many National Parks does the National Park Service manage?",
+        first: "411",
+        second: "36",
+        third: "59",
+        fourth: "11",
+        answer: "third"
     }]
 // define total length of quiz for tally-page function
 var totalQuestions = questions.length;
@@ -98,8 +98,8 @@ var answers = [{ //Answer 1//
     answer: "Great Sand Dunes National Park is home to dunes that are as tall as 750 feet, the tallest in North America.",
     funFact: "The park has one of the most fragile and complex dune systems in the world, and winds of up to 40 mph are continually reshaping the dunes."
     },{             //Answer 6//
-    answer: "The National Park Service manages 59 National Parks. Twenty-seven states have National Parks, as do the territories of American Samoa and the United States Virgin Islands. California has the most with 9 National Parks.",
-    funFact: "The National Park Service manages 411 sites, 59 of which are National Parks. The remaining sites include national memorials, seashores, historic sites, battlefields and more. The National Park Service manages a wide variety of sites due to its mission to preserve sites containing American natural, historical and cultural significance."
+    answer: "Great Smoky Mountains is the most visited national park, drawing more than 10 million recreational visits each year.",
+    funFact: "A majority of the vertebrates inside Great Smoky Mountains National Park on any given day are not humans, but salamanders. The slimy amphibians can be found throughout the park.<br> Among the 30 species of salamanders are 24 varieties of “lungless” salamanders. This wacky creatures breathe by soaking in air through their skin and the linings of their mouths."
     },{             //Answer 7//
     answer: "\"Swatter,\" a bear in Yosemite National Park, slapped at so many people he earned his own nickname.",
     funFact: "Black bears are naturally shy of humans but when they learn to associate food with people or development, that behavior can quickly change. <br> If a bear feels uncomfortable with how close a person is, a black bear may bluff charge, which is when a bear approaches a person quickly, then stops. This is sometimes accompanied by the bear pawing the ground and making vocalizations. The important thing to do in this situation is to stay where you are and look as big as possible—raising your arms in the air—and even holding your backpack over your head, and yelling loudly. As soon as the bear backs away, you should too."
@@ -110,9 +110,9 @@ var answers = [{ //Answer 1//
     answer: "Mesa Verde National Park includes ruins of 600 cliff dwellings and is the largest archaeological preserve in the U.S.",
     funFact: "This area constitutes over 4,000 archaeological sites of the Ancestral Puebloan people, who lived here and elsewhere in the Four Corners region for at least 700 years. Cliff dwellings built in the 12th and 13th centuries include Cliff Palace, which has 150 rooms and 23 kivas, and the Balcony House, with its many passages and tunnels."
     },{             //Answer 10//
-    answer: "Great Smoky Mountains is the most visited national park, drawing more than 10 million recreational visits each year.",
-    funFact: "A majority of the vertebrates inside Great Smoky Mountains National Park on any given day are not humans, but salamanders. The slimy amphibians can be found throughout the park.<br> Among the 30 species of salamanders are 24 varieties of “lungless” salamanders. This wacky creatures breathe by soaking in air through their skin and the linings of their mouths."
-    }]
+    answer: "The National Park Service manages 59 National Parks. Twenty-seven states have National Parks, as do the territories of American Samoa and the United States Virgin Islands. California has the most with 9 National Parks.",
+    funFact: "The National Park Service manages 411 sites, 59 of which are National Parks. The remaining sites include national memorials, seashores, historic sites, battlefields and more. The National Park Service manages a wide variety of sites due to its mission to preserve sites containing American natural, historical and cultural significance."    
+}]
 
 var images = [
     'assets/images/sequoia.jpg',
@@ -120,11 +120,11 @@ var images = [
     'assets/images/mammoth.jpg',
     'assets/images/crater.jpg',
     'assets/images/dunes.jpg',
-    'assets/images/national-parks.jpg',
+    'assets/images/smoky.jpg',
     'assets/images/swatter.jpg',
     'assets/images/biscayne.jpg',
     'assets/images/mesa.jpg',
-    'assets/images/smoky.jpg',
+    'assets/images/national-parks.jpg',
     ]
 
 $(document).ready(function () {
@@ -185,7 +185,7 @@ function writeQuestion() {
 
 function writeAnswer() {
     $('.right-answer').html(answers[currentQuestion].answer);
-    $('.fun-fact').html(answers[currentQuestion].funFact);
+    $('.fun-fact-text').html(answers[currentQuestion].funFact);
 }
 
 function submitAnswer() {
