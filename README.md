@@ -19,9 +19,15 @@ A tallied trivia game featuring facts about the United State's National Parks.
     - From the welcome page, the start button takes users to the first question in the 10-question quiz and sets and displays the timer.
 - ENTER:
     - From each question page, the enter button submits and tallies user answers and takes them to the answer page of the question while reseting and hiding the timer.
+    ![National Parks Trivia: Start](/assets/gifs/trivia_start.gif "Trivia Start")
 - NEXT:
     - From each answer page, the next button starts and displays the timer, and takes the user to the next question page.
         - After the final answer page, the next button takes users to their tally page, which contains their scores, as well as the RESTART button.
+- Timer:
+    - If the timer expires before the answer is submitted, the unanswered tally increases by one and the correct answer is displayed.
+    ![National Parks Trivia: TimesUp](/assets/gifs/trivia_timeup.gif "Trivia Time Up")
 - RESTART: 
     - From the tally page, the restsart button takes users to the welcome page, sets their scores to 0, and shifts their location in the series of questions and answers back to 0.
+    ![National Parks Trivia: Tally & Restart](/assets/gifs/trivia_tally_restart.gif "Trivia Tally & Restart")
+
 
